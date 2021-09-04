@@ -1,10 +1,8 @@
-package br.com.brenonoccioli.transacao.model.form;
+package br.com.brenonoccioli.transacao.controller.dto;
 
 import br.com.brenonoccioli.transacao.model.Estabelecimento;
 
-import javax.validation.constraints.NotBlank;
-
-public class EstabelecimentoForm {
+public class EstabelecimentoDto {
 
     private String nome;
 
@@ -12,12 +10,10 @@ public class EstabelecimentoForm {
 
     private String endereco;
 
-
-    public EstabelecimentoForm() {
-    }
-
-    public Estabelecimento toModel(){
-        return new Estabelecimento(nome,cidade,endereco);
+    public EstabelecimentoDto(Estabelecimento estabelecimento) {
+        this.nome = estabelecimento.getNome();
+        this.cidade = estabelecimento.getCidade();
+        this.endereco = estabelecimento.getEndereco();
     }
 
     public String getNome() {

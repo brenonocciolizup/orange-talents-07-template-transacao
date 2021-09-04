@@ -2,14 +2,14 @@ package br.com.brenonoccioli.transacao.model;
 
 import org.hibernate.annotations.CreationTimestamp;
 
-import javax.persistence.Embedded;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Entity
 public class Transacao {
 
     @Id
@@ -27,7 +27,7 @@ public class Transacao {
     @Embedded
     private Cartao cartao;
 
-    @CreationTimestamp
+    @NotNull
     private LocalDateTime efetivadaEm;
 
     @Deprecated

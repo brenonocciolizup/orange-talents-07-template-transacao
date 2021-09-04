@@ -1,9 +1,7 @@
 package br.com.brenonoccioli.transacao.model.form;
 
-import br.com.brenonoccioli.transacao.model.Cartao;
-import br.com.brenonoccioli.transacao.model.Estabelecimento;
 import br.com.brenonoccioli.transacao.model.Transacao;
-import org.springframework.lang.UsesSunHttpServer;
+
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -61,4 +59,5 @@ public class TransacaoForm {
     public LocalDateTime getEfetivadaEm() {
         return efetivadaEm;
     }
+
 }
